@@ -14,6 +14,7 @@ html {
 
 .box {
  /* 24 C, D, E, F */
+ /* 22 C-2 */
  height: 200px;
  background: green;
  margin: 15% auto;
@@ -21,6 +22,7 @@ html {
  text-align: center;
  box-sizing: border-box;
  border: 5px solid black;
+ box-shadow: 10px 10px;
 }
 .children {
  /* 25 D */
@@ -39,6 +41,7 @@ html {
 }
 /* 25F -- Menu Items 1 - 4 */
 #menuitem1 {
+ /* 22 C-1 */
  display: none;
 } 
 #menuitem2 {
@@ -71,12 +74,128 @@ html {
  right: 0;
  bottom: 0;
 }
-#fixed {
- /* 25C-3 */
+.fixed.sub-menu {
+
  text-align: center;
- padding-top: 2%;
  position: fixed;
+ top: 20px;
+ right: 20px;
+ width: 20%;
+ background: rgb(194, 250, 194);
+ z-index: 990;
+}
+ul>li {
+ /* 22 C-3 */
+ list-style-type: none;
+ margin: 5% 0; 
+}
+#paragraph-text {
+ width: 200px;
+ background: grey;
+ display: flex;
+
+}
+div p {
+ /* 22 C-4 */
+ color: greenyellow;
+ text-align: center;
+ 
+}
+h1 + h2 {
+ /* 22 C-5 */
+ font-size: 25px;
+ color: navajowhite;
+}
+#flex-master {
+  display: flex;
+  justify-content: space-evenly
+}
+#flexbox-container_one {
+ /* 27 - C, D, E */
  width: 10%;
- height: 5%;
- background: green;
+ background-color: teal;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap-reverse;
+}
+#flexbox-container_two {
+ /* 27 - F , G */
+ width: 50%;
+ background-color: teal;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+#modal {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: -1000px;
+ left: 0;
+ background-color: white;
+ z-index: 999;
+ /* 28D */
+ transition: all 1s ease-in-out;
+}
+#video {
+ display: flex;
+ flex-direction: column;
+ background: white;
+ padding: 10%;
+}
+@keyframes video-animation {
+ /* 28C */
+  0% {
+   transform: rotate(0deg);
+   left: 0px;
+ }
+ 25% {
+   transform: rotate(20deg);
+   left: 0px;
+ }
+ 50% {
+   transform: rotate(0deg);
+   left: 500px;
+ }
+ 55% {
+   transform: rotate(0deg);
+   left: 500px;
+ }
+ 70% {
+   transform: rotate(0deg);
+   left: 500px;
+   background: #1ec7e6;
+ }
+ 100% {
+   transform: rotate(-360deg);
+   left: 0px;
+ }
+}
+#video-animate {
+ background-color: steelblue;
+ position: relative;
+ width: 13%;
+ padding: 2%;
+ width: 70px;
+ border-radius: 5px;
+ -webkit-border-radius: 5px;  
+ animation: video-animation 5s infinite;
+ -moz-animation: video-animation 5s infinite;
+ -webkit-animation: video-animation 5s infinite;
+ -o-animation: video-animation 5s infinite;
+ 
+}
+#yoshi-image {
+ /* 28E -- Changed on button click */
+ transform: scale(1);
+}
+.yoshi-button {
+ position: relative;
+ z-index: 999;
 }

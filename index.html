@@ -1,35 +1,125 @@
 <!DOCTYPE html>
+<!-- 54I - 1, 2, 3 -->
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head> 
+  
+<meta charset="UTF-8">
+<!-- 58D -->
+<meta name="description" content="Just passing off some things to show that I can do HTML / CSS things">
+<!-- 58E -->
+<meta name="keywords" content="HMTL,CSS,Javascript,Animation,Yoshi,DevMountain">
+<!-- 58G -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 54H -->
  <link rel="stylesheet" href="style.css">
  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
- <title>Compentency Testing</title>
+ <script src="script.js"></script>
+
+<!-- 58C -->
+ <title>Competency Testing</title>
+  <audio id="yoshi">
+    <!-- 56C (plays when you open the modal) -->
+    <source src="assets/smw_riding_yoshi.wav" type="audio/wav">
+  </audio>
 </head>
+
 <body>
- <div class="fake-nav">
-  <div id="menuitem1">About</div>
-  <div id="menuitem2">Block takes up the whole page</div>
-  <div id="menuitem3">This </div>
-  <div id="menuitem4">is on the same line as this</div>
+ <div id="modal">
+   <!-- 54E-2 -->
+    <img id="yoshi-image" src="./assets/Yoshi-PNG-Image.png" height="500px" alt="yoshi"/>
+    <div>
+      <button class="yoshi-button" onclick="makeYoshiGrow()">Grow Yoshi</button>
+      <button class="yoshi-button" onclick="makeYoshiNormal()">Normal Yoshi</button>
+      <button class="yoshi-button" onclick="makeYoshiShrink()">Small Yoshi</button>
+    </div>
+    <!-- 54F-1 -->
+    <h1>Yoshi approves of my javascript</h1>
+    <button onclick="returnModalToWhenceItCame()">Go back</button>
  </div>
- <div class="box"> Inside Content 
-  <div class="children"> Floating this shiz left
+ <button onclick="moveModal()">Show me the modal</button>
+ <!-- 54J -->
+ <!-- 54 C-3 -->
+ <!-- 54D-1, -->
+ <header>
+   <div class="fake-nav">
+    <div id="menuitem1">About</div>
+    <div id="menuitem2">Block takes up the whole page</div>
+    <div id="menuitem3">This </div>
+    <div id="menuitem4">is on the same line as this</div>
+   </div>
+   <div class="box"> Inside Content 
+    <div class="children"> Floating this shiz left
+  
+    </div>
+    </div>
+    <div id="relative"> 
+     I'm relative so I own my children.
+        <!-- 54 C-2 -->
+       <span id="absolute">
+        I'm absolute but have to listen to relative.
+       </span>
+  
+  
+   </div>
+   <div class="fixed sub-menu">
+     <!-- 54E-1 -->
+     <ul>
+       <li>I'm a fixed div</li>
+       <li>The carrot only applies cause I'm immediate</li>
+       <div>
+         <li>Not to me!</li>
+       </div>
+     </ul>
+   </div>
+ </header>
 
+ <!-- 54D-2, -->
+ <article>
+   <div id="paragraph-text">
+     <div>
+       <div>
+          <!-- 54 C-1 -->
+         <p>I'm nested, but the space still applies to me!</p>
+       </div>
+     </div> 
+   </div>
+  
+   <!-- 54G -->
+   <input style="width: 280px" type="text" placeholder="inputs are self closing tags, nothing needed inside!"/>
+   <div>
+     <!-- 54 F-1, F-2 -->
+      <h1> a fake div, to style the sibling after me! </h1>
+      <h2> I'm the sibling so I'm styled </h2>
+   </div>
+  
+   <div id="video">
+      <div id="video-animate">Checkout the video!</div>
+     <!-- 56D -->
+     <p style="color: black">don't forget to play your own music, spiderman will be in sync regardless of your choice</p>
+     <video src="./assets/videoplayback.mp4" autoplay muted loop></video>
   </div>
-  </div>
-  <div id="relative"> 
-   I'm relative so I own my children.
-     <div id="absolute">
-      I'm absolute but have to listen to relative.
+  
+ </article>
+
+ <!-- 54D-3 -->
+ <footer>
+   <div id="flex-master">
+     <div id="flexbox-container_one"> 
+       <p>Flex Item1</p>
+       <p>Flex Item2</p>
+       <p>Flex Item3</p>
+       <p>Flex Item4</p>
      </div>
+     <div id="flexbox-container_two"> 
+        <p>Flex Item1</p>
+        <p>Flex Item2</p>
+        <p>Flex Item3</p>
+        <p>Flex Item4</p>
+      </div>
+   </div>
+ </footer>
 
 
- </div>
- <div id="fixed">
-   Scroll, I'm fixed!
- </div>
 </body>
 </html>
